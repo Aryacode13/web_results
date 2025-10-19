@@ -720,6 +720,32 @@ class _DashboardPageState extends State<DashboardPage> with TickerProviderStateM
     );
   }
 
+  void _handleServiceLinkTap(String text) {
+    if (text == 'PRICING') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const PricingPage()),
+      );
+    } else if (text == 'FEATURES') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const FeaturesPage()),
+      );
+    } else if (text == 'FAQ') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const FAQPage()),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('$text page coming soon!'),
+          duration: const Duration(seconds: 1),
+        ),
+      );
+    }
+  }
+
   void _handleFooterLinkTap(String text) {
     if (text == 'Home') {
       // Already on Home page - reset selectedMenuItem to Home
@@ -932,7 +958,7 @@ class _DashboardPageState extends State<DashboardPage> with TickerProviderStateM
         setState(() {
           selectedMenuItem = text;
         });
-        _handleFooterLinkTap(text);
+        _handleServiceLinkTap(text);
       },
       child: Text(
         text,
