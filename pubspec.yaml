@@ -1,0 +1,40 @@
+name: running_web_remake
+description: A Flutter web application for running dashboard
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  google_fonts: ^6.1.0
+  url_launcher: ^6.2.2
+  supabase_flutter: ^2.5.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lariterus_logo-removebg-preview.png
+    - backgroundlari.jpg
+    - lari.jpg
+    - sepeda.jpg
+    - triathlon.jpg
+    - tiga.jpg
+    - pricing.jpg
+    - features.jpg
+    - splash.gif
+    - assets/happy_logo.png
+    - assets/lariterus_logo.png
+    - assets/certificate.png
+  fonts:
+    - family: DINCondensed
+      fonts:
+        - asset: assets/fonts/DIN Condensed Bold.ttf
